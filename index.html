@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Valentine Letter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valentine Letter</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -16,36 +16,27 @@
   </div>
 
   <!-- Letter Screen -->
-  <div id="letter-container" style="display:none;">
+  <div id="letter-container">
     <div class="letter-window">
 
       <h1 id="letter-title">Will you be my Valentine?</h1>
 
-      <img src="cat_heart.gif" class="cat" id="letter-cat" />
+      <img src="cat_heart.gif" id="letter-cat" class="cat" />
 
-      <div class="buttons" id="letter-buttons">
-        <img src="yes.png" class="btn yes-btn" alt="Yes" />
-        <div class="no-wrapper">
-          <img src="no.png" class="btn no-btn" alt="No" />
-        </div>
+      <div id="letter-buttons">
+        <img src="yes.png" class="yes-btn" />
+        <img src="no.png" class="no-btn" />
       </div>
 
-      <!-- ❤️ Hidden Message + Pictures -->
+      <!-- Hidden Romantic Message -->
       <div id="final-text" style="display:none; text-align:center; margin-top:20px;">
 
         <p style="font-size:18px; color:#ff4d6d;">
           <strong>Happy Valentine’s Day My Love ❤️</strong><br><br>
-          My love, every single day with you feels like a beautiful blessing.<br><br>
-          You are not just my husband, you are my best friend, my safe place,
-          and my greatest strength.<br><br>
-          I am so lucky to call you mine — today, tomorrow, and forever 💍✨
+          My love, every single day with you feels like a blessing.<br><br>
+          You are my best friend, my safe place, and my forever 💍✨<br><br>
+          I love you more than words can ever explain.
         </p>
-
-        <div style="margin-top:20px;">
-          <img src="pic1.jpg" style="width:200px; border-radius:15px; margin:10px;">
-          <img src="pic2.jpg" style="width:200px; border-radius:15px; margin:10px;">
-          <img src="pic3.jpg" style="width:200px; border-radius:15px; margin:10px;">
-        </div>
 
       </div>
 
@@ -56,5 +47,6 @@
   <audio id="loveMusic" src="love.mp3" loop></audio>
 
   <script src="script.js"></script>
+
 </body>
 </html>
