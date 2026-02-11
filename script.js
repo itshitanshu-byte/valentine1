@@ -11,7 +11,7 @@ const music = document.getElementById("loveMusic");
 
 const heartsContainer = document.querySelector(".hearts");
 
-// Hide letter & message initially
+// Hide initially
 letterContainer.style.display = "none";
 finalText.style.display = "none";
 
@@ -35,11 +35,19 @@ yesBtn.addEventListener("click", () => {
   buttons.style.display = "none";
   finalText.style.display = "block";
 
+  // 🎵 Force play music properly
+  music.pause();
   music.currentTime = 0;
-  music.play();
+  music.volume = 1.0;
+
+  music.play().then(() => {
+    console.log("Music playing");
+  }).catch(err => {
+    console.log("Play error:", err);
+  });
 });
 
-// ❤️ Falling Hearts
+// Falling Hearts
 function createHeart() {
   const heart = document.createElement("div");
   heart.classList.add("heart");
