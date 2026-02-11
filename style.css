@@ -1,9 +1,34 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #fff;
-  background-image: url("https://www.transparenttextures.com/patterns/hearts.png");
+  overflow: hidden;
+  background: #fff0f5;
   text-align: center;
+}
+
+/* Falling Hearts Container */
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  top: -10px;
+  font-size: 20px;
+  color: red;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
 }
 
 /* Envelope Screen */
@@ -14,6 +39,8 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
 #envelope {
@@ -26,6 +53,8 @@ body {
   display: none;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .letter-window {
