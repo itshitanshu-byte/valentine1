@@ -8,6 +8,8 @@ const buttons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
 const nextBtn = document.getElementById("nextBtn");
 
+const heartsContainer = document.querySelector(".hearts");
+
 // Hide initially
 letterContainer.style.display = "none";
 finalText.style.display = "none";
@@ -33,7 +35,26 @@ yesBtn.addEventListener("click", () => {
   finalText.style.display = "block";
 });
 
-// NEXT button → redirect to gallery
+// NEXT button → redirect
 nextBtn.addEventListener("click", () => {
   window.location.href = "gallery.html";
 });
+
+// Floating Hearts Animation
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "❤️";
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+  heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+
+  heartsContainer.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 5000);
+}
+
+setInterval(createHeart, 300);
