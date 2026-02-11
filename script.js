@@ -8,18 +8,15 @@ const title = document.getElementById("letter-title");
 const catImg = document.getElementById("letter-cat");
 const buttons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
+const music = document.getElementById("loveMusic");
 
-// Click Envelope → Open Letter
+// Open Letter
 envelope.addEventListener("click", () => {
   envelope.style.display = "none";
   letter.style.display = "flex";
-
-  setTimeout(() => {
-    document.querySelector(".letter-window").classList.add("open");
-  }, 50);
 });
 
-// Move NO button randomly
+// Move NO button
 noBtn.addEventListener("mouseover", () => {
   const distance = 200;
   const angle = Math.random() * Math.PI * 2;
@@ -31,7 +28,7 @@ noBtn.addEventListener("mouseover", () => {
   noBtn.style.transform = `translate(${moveX}px, ${moveY}px)`;
 });
 
-// YES button clicked
+// YES Click
 yesBtn.addEventListener("click", () => {
 
   title.textContent = "Yippeeee! ❤️";
@@ -39,4 +36,7 @@ yesBtn.addEventListener("click", () => {
 
   buttons.style.display = "none";
   finalText.style.display = "block";
+
+  // 🎵 Play music
+  music.play();
 });
