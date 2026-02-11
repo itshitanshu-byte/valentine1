@@ -1,52 +1,60 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Valentine Letter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Valentine Letter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Pixelify+Sans:wght@400..700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<body>
 
-  <body>
-    <!-- Envelope Screen -->
-    <div id="envelope-container">
-      <img src="envelope.png" alt="Envelope" id="envelope" />
-      <p>♡ Letter for You ♡</p>
-    </div>
+  <!-- Envelope Screen -->
+  <div id="envelope-container">
+    <img src="envelope.png" alt="Envelope" id="envelope" />
+    <p>♡ Letter for You ♡</p>
+  </div>
 
-    <!-- Letter Screen -->
-    <div id="letter-container">
-      <div class="letter-window">
-        <h1 id="letter-title">Will you be my Valentine?</h1>
+  <!-- Letter Screen -->
+  <div id="letter-container" style="display:none;">
+    <div class="letter-window">
 
-        <img src="cat_heart.gif" class="cat" id="letter-cat" />
+      <h1 id="letter-title">Will you be my Valentine?</h1>
 
-        <div class="buttons" id="letter-buttons">
-          <img src="yes.png" class="btn yes-btn" alt="Yes" />
-          <div class="no-wrapper">
-            <img src="no.png" class="btn no-btn" alt="No" />
-          </div>
+      <img src="cat_heart.gif" class="cat" id="letter-cat" />
+
+      <div class="buttons" id="letter-buttons">
+        <img src="yes.png" class="btn yes-btn" alt="Yes" />
+        <div class="no-wrapper">
+          <img src="no.png" class="btn no-btn" alt="No" />
         </div>
+      </div>
 
-        <!-- ❤️ Hidden Husband Message -->
-        <p id="final-text" class="final-text" style="display:none; text-align:center; font-size:18px; color:#ff4d6d; margin-top:20px;">
+      <!-- ❤️ Hidden Message + Pictures -->
+      <div id="final-text" style="display:none; text-align:center; margin-top:20px;">
+
+        <p style="font-size:18px; color:#ff4d6d;">
           <strong>Happy Valentine’s Day My Love ❤️</strong><br><br>
-          My love, every single day with you feels like a beautiful blessing. <br><br>
-          You are not just my husband, you are my best friend, my safe place, and my greatest strength. <br><br>
-          Thank you for loving me and standing beside me always. <br><br>
+          My love, every single day with you feels like a beautiful blessing.<br><br>
+          You are not just my husband, you are my best friend, my safe place,
+          and my greatest strength.<br><br>
           I am so lucky to call you mine — today, tomorrow, and forever 💍✨
         </p>
 
-      </div>
-    </div>
+        <div style="margin-top:20px;">
+          <img src="pic1.jpg" style="width:200px; border-radius:15px; margin:10px;">
+          <img src="pic2.jpg" style="width:200px; border-radius:15px; margin:10px;">
+          <img src="pic3.jpg" style="width:200px; border-radius:15px; margin:10px;">
+        </div>
 
-    <script src="script.js"></script>
-  </body>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 🎵 Music -->
+  <audio id="loveMusic" src="love.mp3" loop></audio>
+
+  <script src="script.js"></script>
+</body>
 </html>
