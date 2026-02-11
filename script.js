@@ -7,13 +7,15 @@ const title = document.getElementById("letter-title");
 const cat = document.getElementById("letter-cat");
 const buttons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
-const music = document.getElementById("loveMusic");
+const nextBtn = document.getElementById("nextBtn");
+const gallery = document.getElementById("gallery");
 
 const heartsContainer = document.querySelector(".hearts");
 
 // Hide initially
 letterContainer.style.display = "none";
 finalText.style.display = "none";
+gallery.style.display = "none";
 
 // Open letter
 envelopeContainer.addEventListener("click", () => {
@@ -34,17 +36,12 @@ yesBtn.addEventListener("click", () => {
   cat.src = "cat_dance.gif";
   buttons.style.display = "none";
   finalText.style.display = "block";
+});
 
-  // 🎵 Force play music properly
-  music.pause();
-  music.currentTime = 0;
-  music.volume = 1.0;
-
-  music.play().then(() => {
-    console.log("Music playing");
-  }).catch(err => {
-    console.log("Play error:", err);
-  });
+// NEXT click
+nextBtn.addEventListener("click", () => {
+  finalText.style.display = "none";
+  gallery.style.display = "block";
 });
 
 // Falling Hearts
