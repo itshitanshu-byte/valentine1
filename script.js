@@ -9,10 +9,9 @@ const buttons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
 const music = document.getElementById("loveMusic");
 
-// ❤️ Falling Hearts Container
 const heartsContainer = document.querySelector(".hearts");
 
-// Hide letter initially
+// Hide letter & message initially
 letterContainer.style.display = "none";
 finalText.style.display = "none";
 
@@ -35,10 +34,12 @@ yesBtn.addEventListener("click", () => {
   cat.src = "cat_dance.gif";
   buttons.style.display = "none";
   finalText.style.display = "block";
+
+  music.currentTime = 0;
   music.play();
 });
 
-// ❤️ Falling Hearts Generator
+// ❤️ Falling Hearts
 function createHeart() {
   const heart = document.createElement("div");
   heart.classList.add("heart");
