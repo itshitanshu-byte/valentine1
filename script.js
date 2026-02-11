@@ -2,20 +2,15 @@ const envelopeContainer = document.getElementById("envelope-container");
 const letterContainer = document.getElementById("letter-container");
 const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
-
 const title = document.getElementById("letter-title");
 const cat = document.getElementById("letter-cat");
 const buttons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
 const nextBtn = document.getElementById("nextBtn");
-const gallery = document.getElementById("gallery");
-
-const heartsContainer = document.querySelector(".hearts");
 
 // Hide initially
 letterContainer.style.display = "none";
 finalText.style.display = "none";
-gallery.style.display = "none";
 
 // Open letter
 envelopeContainer.addEventListener("click", () => {
@@ -38,27 +33,7 @@ yesBtn.addEventListener("click", () => {
   finalText.style.display = "block";
 });
 
-// NEXT click
+// NEXT button → redirect to gallery
 nextBtn.addEventListener("click", () => {
-  finalText.style.display = "none";
-  gallery.style.display = "block";
+  window.location.href = "gallery.html";
 });
-
-// Falling Hearts
-function createHeart() {
-  const heart = document.createElement("div");
-  heart.classList.add("heart");
-  heart.innerHTML = "❤️";
-
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
-  heart.style.fontSize = (Math.random() * 20 + 15) + "px";
-
-  heartsContainer.appendChild(heart);
-
-  setTimeout(() => {
-    heart.remove();
-  }, 5000);
-}
-
-setInterval(createHeart, 300);
