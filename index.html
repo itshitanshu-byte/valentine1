@@ -9,7 +9,6 @@
 
 <body>
 
-  <!-- ❤️ Falling Hearts -->
   <div class="hearts"></div>
 
   <!-- Envelope Screen -->
@@ -34,16 +33,17 @@
       <div id="final-text">
         <p>
           <strong>Happy Valentine’s Day My Love ❤️</strong><br><br>
-          You are my best friend, my safe place and my forever 💍✨<br><br>
-          I love you more than words can ever explain.
+          You are my best friend, my safe place and my forever 💍✨
         </p>
       </div>
 
     </div>
   </div>
 
-  <!-- 🎵 Music -->
-  <audio id="loveMusic" src="love.mp3" loop></audio>
+  <!-- 🎵 Music (IMPORTANT: preload + controls hidden) -->
+  <audio id="loveMusic" preload="auto">
+      <source src="love.mp3" type="audio/mpeg">
+  </audio>
 
   <script src="script.js"></script>
 
