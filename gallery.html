@@ -31,5 +31,19 @@
   <img src="pic1.jpeg">
   <img src="pic2.jpeg">
 
+  <!-- 🎵 Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="love.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Music Start Script -->
+  <script>
+    document.addEventListener("click", function () {
+      const music = document.getElementById("bgMusic");
+      music.volume = 0.5;   // adjust volume
+      music.play();
+    }, { once: true });
+  </script>
+
 </body>
 </html>
