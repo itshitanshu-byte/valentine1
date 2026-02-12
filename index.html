@@ -43,6 +43,20 @@
     </div>
   </div>
 
+  <!-- 🎵 Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="love.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Music Start Script -->
+  <script>
+    document.addEventListener("click", function () {
+      const music = document.getElementById("bgMusic");
+      music.volume = 0.5;  /* adjust volume here */
+      music.play();
+    }, { once: true });
+  </script>
+
   <script src="script.js"></script>
 
 </body>
